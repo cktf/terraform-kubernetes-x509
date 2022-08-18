@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/cktf/terraform-kubernetes-x509/compare/1.0.1...1.1.0) (2022-08-18)
+
+
+### Features
+
+* change kubeconfig user name to default ([6d350c0](https://github.com/cktf/terraform-kubernetes-x509/commit/6d350c0032e03cf772e8e8b5b5f3f30b41518490))
+
 ## [1.0.1](https://github.com/cktf/terraform-kubernetes-x509/compare/1.0.0...1.0.1) (2022-08-18)
 
 
