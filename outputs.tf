@@ -13,7 +13,7 @@ output "kubeconfig" {
       name = var.username
       user = {
         client-key-data         = base64encode(tls_private_key.this.private_key_pem)
-        client-certificate-data = base64encode(kubernetes_certificate_signing_request.this.certificate)
+        client-certificate-data = base64encode(kubernetes_certificate_signing_request_v1.this.certificate)
       }
     }]
     contexts = [{

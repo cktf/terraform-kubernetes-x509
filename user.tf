@@ -12,13 +12,14 @@ resource "tls_cert_request" "this" {
   }
 }
 
-resource "kubernetes_certificate_signing_request" "this" {
+resource "kubernetes_certificate_signing_request_v1" "this" {
   metadata {
     name = var.username
   }
   spec {
-    usages  = ["digital signature", "key encipherment", "client auth"]
-    request = tls_cert_request.this.cert_request_pem
+    usages      = ["digital signature", "key encipherment", "client auth"]
+    request     = tls_cert_request.this.cert_request_pem
+    signer_name = "kubernetes.io/kube-apiserver-client"
   }
   auto_approve = true
 }
