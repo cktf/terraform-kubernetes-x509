@@ -20,16 +20,12 @@ terraform init
 module "x509" {
   source = "cktf/x509/kubernetes"
 
-  name = "staging"
-  registry = {
-    endpoint = "<REGSITRY_ENDPOINT>"
-    username = "<REGSITRY_USERNAME>"
-    password = "<REGSITRY_PASSWORD>"
-  }
-  quota = {
-    cpu    = "1000"
-    memory = "200Gi"
-    pods   = "10"
+  host     = "<CLUSTER_HOST>"
+  ca_crt   = "<CLUSTER_CA_CRT>"
+  username = "myuser"
+  roles = {
+    default      = "edit"
+    my-namespace = "view"
   }
 }
 ```
