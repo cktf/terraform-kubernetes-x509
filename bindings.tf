@@ -1,18 +1,17 @@
 resource "kubernetes_role_binding" "this" {
-  depends_on = [kubernetes_service_account.this]
+  for_each = var.roles
 
   metadata {
-    name      = "<USERNAME>"
-    namespace = var.name
+    name      = var.username
+    namespace = each.key
   }
-
   role_ref {
     api_group = "rbac.authorization.k8s.io"
     kind      = "ClusterRole"
-    name      = "edit"
+    name      = each.value
   }
   subject {
     kind = "User"
-    name = "<USERNAME>"
+    name = var.username
   }
 }
