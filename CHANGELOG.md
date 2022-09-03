@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/cktf/terraform-kubernetes-x509/compare/1.1.0...1.2.0) (2022-09-03)
+
+
+### Features
+
+* add linux support to terraform lock file ([fa4c19b](https://github.com/cktf/terraform-kubernetes-x509/commit/fa4c19bfb481e99755bf5480c0f1eef8e2459ed4))
+
 # [1.1.0](https://github.com/cktf/terraform-kubernetes-x509/compare/1.0.1...1.1.0) (2022-08-18)
 
 
